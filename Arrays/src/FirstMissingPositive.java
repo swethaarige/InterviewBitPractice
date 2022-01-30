@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /*
 Given an unsorted integer array, find the first missing positive integer.
@@ -37,10 +38,13 @@ public class FirstMissingPositive {
 
     }
     public static int firstMissingPositive(ArrayList<Integer> A) {
+        Collections.sort(A);
         int mx = 1;
         for (int i = 0; i < A.size(); i++) {
-            if (A.get(i) == mx) {
-                mx = mx + 1;
+            if (A.get(i) > 0) {
+                if (A.get(i) == mx) {
+                    mx = mx + 1;
+                }
             }
         }
         return mx;
