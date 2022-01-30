@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 /*
 Problem Description : Give a N*N square matrix, return an array of its anti-diagonals. Look at the example for more details.
 Example:Input:
