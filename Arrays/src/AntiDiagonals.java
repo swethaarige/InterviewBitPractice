@@ -13,7 +13,7 @@ Return the following:
   [6, 8],
   [9]
 ]
-Solution Approach
+Solution Approach:
 Lets look at how the co-ordinates change when you move from one element to the other in the anti-diagonal.
 With every movement, row increases by one, and the column decreases by one ( or in other words (1, -1)
 gets added to the current co-ordinates ).
