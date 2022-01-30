@@ -17,7 +17,7 @@ import java.util.*;
 public class NBy3RepeatingNumber {
     public static void main (String[] args) {
        List<Integer> list = new ArrayList<>();
-       list.add(1); list.add(2); list.add(3); list.add(1); list.add(1);
+       list.add(1); list.add(1); list.add(1); list.add(2); list.add(3);list.add(5);list.add(7);
        int repeatedNumber = repeatedNumber(list);
        System.out.println("Repeated Number is :" +repeatedNumber);
 
@@ -26,14 +26,16 @@ public class NBy3RepeatingNumber {
         Map<Integer, Integer> values = new HashMap<>();
         for (int i = 0; i < a.size(); i++) {
             if (values.containsKey(a.get(i))) {
-                values.put(a.get(i), a.get(i) + 1);
+                values.put(a.get(i), values.get(a.get(i)) + 1);
             } else {
                 values.put(a.get(i), 1);
             }
         }
         int count = a.size() / 3;
+        System.out.println("Count is " + count);
         int result  = -1;
         for (Integer key : values.keySet()) {
+            System.out.println("Value key count is " +key  + "is" + values.get(key));
             if (values.get(key) > count) {
                 result = key;
             }
