@@ -37,7 +37,7 @@ public class PascalTriangle {
             return result;
         result.add(new ArrayList<>());
         result.get(0).add(1);
-        for (int i = 1; i <= A; i++) {
+        for (int i = 1; i < A; i++) {
             result.add(new ArrayList<>());
             result.get(i).add(1);
             for (int j = 0; j < i - 1; j++) {
