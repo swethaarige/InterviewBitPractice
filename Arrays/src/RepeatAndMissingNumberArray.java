@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /*
@@ -27,9 +28,31 @@ public class RepeatAndMissingNumberArray {
     public static void main (String[] args) {
         List<Integer> A = new ArrayList<>(5);
         A.add(3); A.add(1);A.add(2);A.add(5);A.add(3);
-        ArrayList<Integer> result = repeatedAndMissingNumbers(A);
+        ArrayList<Integer> result = repeatedAndMissingNumbers2(A);
         System.out.println("Repating and Missing Integers  " +result.get(0) + " " +  result.get(1));
     }
+    public static ArrayList<Integer> repeatedAndMissingNumbers2(List<Integer> A) {
+        ArrayList<Integer> out = new ArrayList<>();
+        double l = A.size();
+        double sum = (l * (l + 1)) / 2;
+        long sumActual = 0;
+        int repeatingNumber = 0;
+        HashSet<Integer> aSet = new HashSet<>();
+        for (int i = 0; i < A.size(); i++) {
+            if(aSet.contains(A.get(i))) {
+                repeatingNumber = A.get(i);
+            }
+            aSet.add(A.get(i));
+            sumActual += A.get(i);
+        }
+        double diff = sumActual - sum;
+        int missingNumber = repeatingNumber - (int)diff;
+        out.add(missingNumber);
+        out.add(repeatingNumber);
+        return out;
+
+    }
+
     public static ArrayList<Integer> repeatedAndMissingNumbers(List<Integer> A) {
         int size = A.size();
         long sumOfSquares = getSumOfSquares(size);
