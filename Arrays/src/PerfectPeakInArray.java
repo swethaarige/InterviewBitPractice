@@ -58,16 +58,26 @@ Explanation 2:
 
  No such element exits.
 
- An Efficient Solution can solve this problem in O(N) time using O(N) extra space. Below is detailed solution.
+An Efficient Solution can solve this problem in O(N) time using O(N) extra space.
+Below is detailed solution.
 
 Create two arrays leftMax[] and rightMin[].
-Traverse input array from left to right and fill leftMax[] such that leftMax[i] contains maximum element from 0 to i-1 in input array.
-Traverse input array from right to left and fill rightMin[] such that rightMin[i] contains minimum element from to N-1 to i+1 in input array.
-Traverse input array. For every element A[i], check if A[i] is greater than leftMax[i] and smaller than rightMin[i]. If yes, return 1.
+1. Traverse input array from left to right and fill leftMax[] such that leftMax[i] contains maximum element
+from 0 to i-1 in input array.
+2. Traverse input array from right to left and fill rightMin[] such that rightMin[i] contains minimum element
+from to N-1 to i+1 in input array.
+3. Traverse input array. For every element A[i], check if A[i] is greater than leftMax[i] and smaller than
+rightMin[i]. If yes, return 1.
 If loops exits and no such element found return 0
  */
 public class PerfectPeakInArray {
-    public int perfectPeak(ArrayList<Integer> A) {
+    public static void main (String[] args) {
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(5); A.add(1); A.add(4); A.add(3); A.add(6); A.add(8); A.add(10); A.add(7); A.add(9);
+        System.out.println("Perfect Peak is " +perfectPeak(A));
+
+    }
+    public static int perfectPeak(ArrayList<Integer> A) {
         int n = A.size();
         int max[] = new int[n];
         int min[] = new int[n];
@@ -76,11 +86,11 @@ public class PerfectPeakInArray {
         for (int i = 1; i < n; i++) {
             max[i] = Math.max(max[i - 1], A.get(i));
         }
-        for (int j = n - 2; j >= 0; j++) {
+        for (int j = n - 2; j >= 0; j--) {
             min[j] = Math.min(min[j + 1], A.get(j));
         }
         for (int i = 1; i < n - 1; i++) {
-            if (A.get(i) > max[i - 1] && A.get(i) < min[i - 1]) {
+            if (A.get(i) > max[i - 1] && A.get(i) < min[i + 1]) {
                 return 1;
             }
         }
