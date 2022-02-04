@@ -14,6 +14,13 @@ Palindromic Substring problem. For each character in the given string, consider 
 of a palindrome and expand in both directions to find all palindromes that have it as midpoint.
 For an even length palindrome, consider every adjacent pair of characters as the midpoint.
 We use a set to store all unique palindromic substrings.
+
+For each letter in the input string, start expanding to the left and right while checking for
+even and odd length palindromes. Move to the next letter if we know a palindrome doesn’t exist there.
+We expand one character to the left and right and compare. If both are equal, we print out
+the palindrome substring.
+Runtime complexity: Polynomial, O(n^{2})
+Memory complexity: Constant, O(1)
  */
 public class FindAllPolindromicSubstrings {
     public static Set<String> findPalindromicSubstrings(String str) {
