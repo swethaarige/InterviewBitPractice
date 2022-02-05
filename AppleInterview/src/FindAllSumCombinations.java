@@ -20,8 +20,7 @@ to the result list which is the sum combination for that particular call. Whenev
 becomes equal to target, we can be sure that the result list contains a possible combination for
 target. This list is appended to the final output list.
 4.Base condition of recursion:
-if current_sum equals target
-  print the output contents
+if current_sum equals target print the output contents
 Before each recursive call, an element is added to result. However, after each call,
 this element is also removed from the list in order to reset the list.
  */
