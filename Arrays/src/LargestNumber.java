@@ -26,6 +26,7 @@ public class LargestNumber {
         System.out.println("Largest Number"+largestNum);
 
     }
+    //O(nlogn) Time and O(n) space
     public static String largestNumber(final List<Integer> A) {
         String[] arr = new String[A.size()];
         for (int i = 0; i < A.size(); i++) {
@@ -41,7 +42,7 @@ public class LargestNumber {
         for (String s : arr) {
             sb.append(s);
         }
-       if (sb.charAt(0) == '0') {
+       if (sb.charAt(0) == '0') { //Checking if all the Zeroes are there
             return String.valueOf(0);
         }
         return sb.toString();

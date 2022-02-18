@@ -19,7 +19,8 @@ Example Input :Input 1: A = [5, 1, 4, 3, 6, 8, 10, 7, 9]
 Input 2:A = [5, 1, 4, 4]
 Example Output : Output 1: 1
 Output 2: 0
-Example Explanation Explanation 1:
+Example Explanation
+Explanation 1:
 A[4] = 6 is the element we are looking for.All elements on left of A[4] are smaller than it and all
 elements on right are greater.
 Explanation 2:No such element exits.

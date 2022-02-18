@@ -20,10 +20,10 @@ then recursively check the left subtree and right subtree of one tree is identic
 Use a depth-first traversal on both trees simultaneously and keep comparing the data at each
 level to solve this problem.
 
-Runtime Complexity: Linear, O(n)O(n)
+Runtime Complexity: Linear, O(n)
 
-Memory Complexity: O(h)O(h) in best case, or it will be O(log n)O(logn) for a balanced tree
-and in the worst case can be O(n)O(n).
+Memory Complexity: O(h) in best case, or it will be O(log n) for a balanced tree
+and in the worst case can be O(n)
  */
 public class SameBSTs {
     public static void main(String[] args) {
