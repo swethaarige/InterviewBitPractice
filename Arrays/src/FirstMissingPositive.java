@@ -37,6 +37,7 @@ public class FirstMissingPositive {
         System.out.println("C   " +firstMissingPositive(C));
 
     }
+    //O(n) Time and O(1) Space
     public static int firstMissingPositive(ArrayList<Integer> A) {
         Collections.sort(A);
         int mx = 1;

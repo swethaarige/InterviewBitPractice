@@ -17,6 +17,7 @@ public class FindDuplicateInArray {
         A.add(3); A.add(4); A.add(1); A.add(4); A.add(1);
         System.out.println("Duplicate Number is  " +duplicateNumber(A) );
     }
+    //O(n) Time and O(1) Space
     public static int duplicateNumber(List<Integer> A) {
         Set<Integer> nums = new HashSet<Integer>();
         for (Integer num : A) {
