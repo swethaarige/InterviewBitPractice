@@ -10,14 +10,14 @@ Example: if n = 2, the sequence is 11.
 public class CountAndSay {
 
     public static void main (String[] args) {
-
-        System.out.println("Count And Say" +countAndSay(4));
-        System.out.println("Count And Say" +countAndSay(5));
-        System.out.println("Count And Say" +countAndSay(5));
-        System.out.println("Count And Say" +countAndSay(6));
-        System.out.println("Count And Say" +countAndSay(7));
-        System.out.println("Count And Say" +countAndSay(8));
-        System.out.println("Count And Say" +countAndSay(9));
+        System.out.println("Count And Say " +countAndSay(3));
+        System.out.println("Count And Say " +countAndSay(4));
+        System.out.println("Count And Say " +countAndSay(5));
+        System.out.println("Count And Say " +countAndSay(5));
+        System.out.println("Count And Say " +countAndSay(6));
+        System.out.println("Count And Say " +countAndSay(7));
+        System.out.println("Count And Say " +countAndSay(8));
+        System.out.println("Count And Say " +countAndSay(9));
     }
 
     public static String countAndSay(int n) {
