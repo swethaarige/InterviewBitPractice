@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 /*
 Find if Given number is power of 2 or not.
 More specifically, find if given number can be expressed as 2^k where k >= 1.
@@ -27,5 +29,17 @@ public class PowerOf2 {
             }
         }
         return false;
+    }
+
+    public static int power(String A) {
+        if (A.equals("1")) {
+            return 0;
+        }
+        BigInteger N = new BigInteger(A);
+        if (N.bitCount() == 1) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
