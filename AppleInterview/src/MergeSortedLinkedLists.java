@@ -25,6 +25,7 @@ if B != NULL, set curr.next = B.
 4. Else if p1prev != null p1.prev.next = p2; else p1prev = p2; p2 = p2.next and p1prev.next = p1;
 5. if p1 == null p1prev.next = p2; return headone if headone is less than headtwo
 
+Time Complexity - O(n+m) and Space Complexity O(1)
  */
 
 public class MergeSortedLinkedLists {
